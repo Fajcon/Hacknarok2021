@@ -8,6 +8,8 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject canItem;
     public GameObject boxItem;
     public GameObject packItem;
+    public GameObject milkItem;
+    public GameObject bottleItem;
     public GameObject shelfItem;
 
     //public Material defaultMaterial;
@@ -19,7 +21,7 @@ public class ObjectSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var items = GetFromFile(@"D:\Documents\Hacknarok2021\data\database.txt");
+        SpawnShelves();
 
         SpawnGoodsOnShelves();
 
@@ -36,11 +38,14 @@ public class ObjectSpawner : MonoBehaviour
     private void SpawnShelves()
     {
         Instantiate(shelfItem, new Vector3(0.25F, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(1, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(1.75F, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(2.5F, 0, 0), Quaternion.identity);
     }
 
     private void SpawnGoodsOnShelves()
     {
-        var items = GetFromFile(@"D:\Documents\Hacknarok2021\data\database.txt");
+        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
 
         //var renderer = GetComponent<Renderer>();
         //renderer.enabled = true;
@@ -52,20 +57,34 @@ public class ObjectSpawner : MonoBehaviour
                 if (item.type == "can" && i <= 5)
                 {
                     //renderer.sharedMaterial = pudliszkiMaterial;
-                    Instantiate(canItem, new Vector3(i * 0.1F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(canItem, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                     
                 }
                 if (item.type == "box" && i <= 3)
                 {
                     //renderer.sharedMaterial = pudliszkiMaterial;
-                    Instantiate(boxItem, new Vector3(i * 0.15F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(boxItem, new Vector3(i * 0.15F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
 
                 }
 
                 if (item.type == "pack" && i <= 4)
                 {
                     //renderer.sharedMaterial = pudliszkiMaterial;
-                    Instantiate(packItem, new Vector3(i * 0.13F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(packItem, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "milk" && i <= 7)
+                {
+                    //renderer.sharedMaterial = pudliszkiMaterial;
+                    Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "bottle" && i <= 4)
+                {
+                    //renderer.sharedMaterial = pudliszkiMaterial;
+                    Instantiate(bottleItem, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
 
                 }
 
