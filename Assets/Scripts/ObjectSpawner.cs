@@ -7,6 +7,7 @@ public class ObjectSpawner : MonoBehaviour
 {
     public GameObject canItem;
     public GameObject boxItem;
+    public GameObject packItem;
     public GameObject shelfItem;
 
     //public Material defaultMaterial;
@@ -48,17 +49,26 @@ public class ObjectSpawner : MonoBehaviour
         {
             for (var i = 0; i < item.quantity; i++)
             {
-                if (i > 7)
-                {
-                    continue;
-                }
-
-                if (item.type == "can")
+                if (item.type == "can" && i <= 5)
                 {
                     //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(canItem, new Vector3(i * 0.1F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                     
                 }
+                if (item.type == "box" && i <= 3)
+                {
+                    //renderer.sharedMaterial = pudliszkiMaterial;
+                    Instantiate(boxItem, new Vector3(i * 0.15F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "pack" && i <= 4)
+                {
+                    //renderer.sharedMaterial = pudliszkiMaterial;
+                    Instantiate(packItem, new Vector3(i * 0.13F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
             }
         }
     }
