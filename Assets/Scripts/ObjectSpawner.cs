@@ -5,22 +5,25 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-
     public GameObject canItem;
     public GameObject boxItem;
+    public GameObject shelfItem;
+
+    //public Material defaultMaterial;
+    //public Material pudliszkiMaterial;
+
+    private float shelfHeight = 0.23F;
+    private float firstShelfHeight = 0.2F;
 
     // Start is called before the first frame update
     void Start()
     {
-        var items = GetFromFile(@"C:\Hack\data\database.txt");
+        SpawnShelves();
 
-        foreach (var item in items) {
-            for (var i = 0; i < item.quantity; i++)
-            {
-                if (item.type == "can")
-                    Instantiate(canItem, new Vector3(i * 0.1F, 0, 0), Quaternion.identity);
-            }
-        }
+        SpawnGoodsOnShelves();
+
+        var renderer = GetComponent<Renderer>();
+
     }
 
     // Update is called once per frame
@@ -29,10 +32,36 @@ public class ObjectSpawner : MonoBehaviour
         
     }
 
-    //private void SpawnObject()
-    //{
-    //    GameObject gameObject = Instantiate() as GameObject;
-    //}
+    private void SpawnShelves()
+    {
+        Instantiate(shelfItem, new Vector3(0.25F, 0, 0), Quaternion.identity);
+    }
+
+    private void SpawnGoodsOnShelves()
+    {
+        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
+
+        //var renderer = GetComponent<Renderer>();
+        //renderer.enabled = true;
+
+        foreach (var item in items)
+        {
+            for (var i = 0; i < item.quantity; i++)
+            {
+                if (i > 7)
+                {
+                    continue;
+                }
+
+                if (item.type == "can")
+                {
+                    //renderer.sharedMaterial = pudliszkiMaterial;
+                    Instantiate(canItem, new Vector3(i * 0.1F, (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    
+                }
+            }
+        }
+    }
 
     private List<GroceryItem> GetFromFile(string path)
     {

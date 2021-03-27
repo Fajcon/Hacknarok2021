@@ -1,3 +1,3 @@
-1;Pomidory;can;20;1;1;1;2,50
-2;Kukurydza;can;15;1;2;1;1,50
-3;Kornflejks;box;5;1;1;3;4,56
+1;Pomidory;can;4;1;1;1;2,50
+2;Kukurydz;can;5;1;2;2;1,50
+3;Kornflej;can;6;1;1;3;4,56
