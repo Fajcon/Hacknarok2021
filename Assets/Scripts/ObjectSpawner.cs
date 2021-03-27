@@ -12,7 +12,7 @@ public class ObjectSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\data\database.txt");
+        var items = GetFromFile(@"C:\Hack\data\database.txt");
 
         foreach (var item in items) {
             for (var i = 0; i < item.quantity; i++)
