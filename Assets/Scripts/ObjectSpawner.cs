@@ -18,6 +18,8 @@ public class ObjectSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.IgnoreLayerCollision(6,6, true);
+        
         SpawnShelves();
 
         SpawnGoodsOnShelves();
@@ -39,7 +41,7 @@ public class ObjectSpawner : MonoBehaviour
 
     private void SpawnGoodsOnShelves()
     {
-        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
+        var items = GetFromFile(@"C:\Hack\data\database.txt");
 
         //var renderer = GetComponent<Renderer>();
         //renderer.enabled = true;
