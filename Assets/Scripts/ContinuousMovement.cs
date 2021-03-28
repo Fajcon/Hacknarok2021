@@ -14,6 +14,8 @@ public class ContinuousMovement : MonoBehaviour
     private float fallingSpeed; 
     private Vector2 inputAxis;
 
+    public HandPresence HandPresence;
+
     private CharacterController character;
     // Start is called before the first frame update
     void Start()
@@ -33,15 +35,18 @@ public class ContinuousMovement : MonoBehaviour
     private void FixedUpdate()
     {
         CapsuleFollowHeadset();
-        Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
-        Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
-        character.Move(direction*Time.fixedDeltaTime*speed);
+        if (!HandPresence.menuOn)
+        {
+            Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
+            Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
+            character.Move(direction * Time.fixedDeltaTime * speed);
 
-        if (checkIfGrounded())
-            fallingSpeed = 0;
-        else
-            fallingSpeed += gravity*Time.fixedDeltaTime;
-        character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);
+            if (checkIfGrounded())
+                fallingSpeed = 0;
+            else
+                fallingSpeed += gravity * Time.fixedDeltaTime;
+            character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);
+        }
     }
 
     void CapsuleFollowHeadset()

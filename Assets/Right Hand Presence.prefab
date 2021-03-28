@@ -46,4 +46,10 @@ MonoBehaviour:
   showController: 0
   controllerCharacteristics: 576
   controllerPrefabs: []
+  inputSource: 4
   handModelPrefab: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  menuPrefab: {fileID: 1028563660914643888, guid: 9b9eaa107e58c8f42b360914019eaf24, type: 3}
+  productPrefab: {fileID: 4384997828055201567, guid: 3e428329576422e4581fe2e4bfffe0c3, type: 3}
+  showMenu: 0
+  menuOn: 0
+  products: []

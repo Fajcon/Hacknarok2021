@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -10,42 +11,73 @@ public class HandPresence : MonoBehaviour
     public InputDeviceCharacteristics controllerCharacteristics;
     public List<GameObject> controllerPrefabs;
     private InputDevice targetDevice;
-    public GameObject handModelPrefab;
-
-    private Animator handAnimator;
-
-    private GameObject spawnedController;
-    private GameObject spwanedHandModel;
+    private InputDevice secondHand;
+    public XRNode inputSource;
     
+    public GameObject handModelPrefab;
+    public GameObject menuPrefab;
+    public GameObject productPrefab;
+    public bool showMenu = true;
+    public bool menuOn;
+    public List<string> products;
+        
+    private Animator handAnimator;
+    private GameObject spawnedHandModel;
+    private GameObject spawnedMenuModel;
+    static private int activeProduct = 0;
+
+    private int slower = 10;
+    private int iterator = 0;
+
+    private bool flag = false;
+
     // Start is called before the first frame update
     void Start()
     {
         List<InputDevice> devices = new List<InputDevice>();
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
-        //
-        // foreach (var item in devices)
-        // {
-        //     Debug.Log(item.name + item.characteristics);
-        //     
-        // }
         if (devices.Count > 0)
         { 
             targetDevice = devices[0];
-            // GameObject prefab = controllerPrefabs.Find(controller => controller.name == targetDevice.name);
-            // if (prefab)
-            // {
-            //     spawnedController = Instantiate(prefab, transform);
-            // }
-            // else
-            // {
-            //     Debug.LogError("Did not find corresponding device");
-            //     spawnedController = Instantiate(controllerPrefabs[0], transform);
-            // }
-        
         }
-        spwanedHandModel = Instantiate(handModelPrefab, transform);
-        handAnimator = spwanedHandModel.GetComponent<Animator>();
+        spawnedHandModel = Instantiate(handModelPrefab, transform);
+        handAnimator = spawnedHandModel.GetComponent<Animator>();
 
+        if (showMenu)
+        {
+            spawnedMenuModel = Instantiate(menuPrefab, transform);
+        }
+    }
+
+    void ShowMenu() //TODO napraw to gówno
+    {
+        spawnedMenuModel.SetActive(true);
+        for (int i = 0; i < 7; i++)
+        {
+            GameObject go = spawnedMenuModel.transform.Find("Product" + i).gameObject;
+            TextMeshPro textMesh = go.GetComponent<TextMeshPro>();
+            if (i < products.Count)
+            {
+                textMesh.SetText(products[i]);
+                if (i == activeProduct)
+                {
+                    textMesh.color = Color.cyan;
+                }
+                else
+                {
+                    textMesh.color = Color.black;
+                }
+            }
+            else
+            {
+                textMesh.SetText("");
+            }
+        }
+    }
+
+    void CloseMenu()
+    {
+        spawnedMenuModel.SetActive(false);
     }
 
     void Updatehandanimation()
@@ -66,22 +98,60 @@ public class HandPresence : MonoBehaviour
         {
             handAnimator.SetFloat("Grip", 0);
         }
+
+        if (showMenu)
+        {
+            iterator++;
+            if (secondHand.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 axisValue) && (iterator % slower) == 0)
+            {
+                if (axisValue.y <= -0.5)
+                {
+                    activeProduct += 1;
+                    activeProduct = activeProduct >= 7 ? 0 : activeProduct;
+                }
+                else if(axisValue.y >= 0.5)
+                {
+                    activeProduct -= 1;
+                    activeProduct = activeProduct < 0 ? 7 : activeProduct;
+                }
+            }
+            
+            if (secondHand.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonValue) &&
+                secondaryButtonValue)
+            {
+                flag = true;
+
+            }
+
+            if (flag && secondHand.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryButtonValuex) &&
+                !secondaryButtonValuex)
+            {
+                flag = false;
+                Debug.Log(activeProduct);
+                products.RemoveAt(activeProduct);
+            }
+        }
+
+        if (showMenu)
+        {
+            if (targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool buttonValue) && buttonValue)
+            {
+                menuOn = true;
+                ShowMenu();
+            }
+            else
+            {
+                menuOn = false;
+                CloseMenu();
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        // if (showController)
-        // {
-            // spwanedHandModel.SetActive(false);
-            // spawnedController.SetActive(true);
-        // }
-        // else
-        // {
-        spwanedHandModel.SetActive(true);
+        secondHand = InputDevices.GetDeviceAtXRNode(inputSource);
+        spawnedHandModel.SetActive(true);
         Updatehandanimation();
-            // spawnedController.SetActive(false);
-        // }
-
     }
 }
