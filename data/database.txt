@@ -8,3 +8,11 @@
 3;Kornflej;milk;6;2;1;3;4,56
 4;Kornflejv;box;3;2;1;4;4,56
 5;Kornflej;bottle;5;2;1;5;4,56
+6;frutkjsf;fruit1;30;5;1;1;1,50
+6;frutkjsf;fruit2;30;5;1;1;1,50
+6;frutkjsf;fruit3;2;5;1;1;1,50
+6;frutkjsf;fruit4;30;5;1;1;1,50
+6;frutkjsf;vege1;80;5;1;1;1,50
+6;frutkjsf;vege3;60;5;1;1;1,50
+6;frutkjsf;vege4;30;5;1;1;1,50
+6;frutkjsf;vege2;3;5;1;1;1,50

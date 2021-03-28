@@ -12,6 +12,16 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject bottleItem;
     public GameObject shelfItem;
 
+    public GameObject fruitItem1;
+    public GameObject fruitItem2;
+    public GameObject fruitItem3;
+    public GameObject fruitItem4;
+    public GameObject vegeItem1;
+    public GameObject vegeItem2;
+    public GameObject vegeItem3;
+    public GameObject vegeItem4;
+    public GameObject woodenBoxItem;
+
     //public Material defaultMaterial;
     //public Material pudliszkiMaterial;
 
@@ -21,6 +31,8 @@ public class ObjectSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Physics.IgnoreLayerCollision(6, 6, true);
+
         SpawnShelves();
 
         SpawnGoodsOnShelves();
@@ -41,6 +53,17 @@ public class ObjectSpawner : MonoBehaviour
         Instantiate(shelfItem, new Vector3(1, 0, 0), Quaternion.identity);
         Instantiate(shelfItem, new Vector3(1.75F, 0, 0), Quaternion.identity);
         Instantiate(shelfItem, new Vector3(2.5F, 0, 0), Quaternion.identity);
+
+        var height = 0.8F;
+        Instantiate(woodenBoxItem, new Vector3(0.25F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(1F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(1.75F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(2.5F, height, 2), Quaternion.identity);
+
+        Instantiate(woodenBoxItem, new Vector3(0.25F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(1F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(1.75F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(2.5F, height, 2.5F), Quaternion.identity);
     }
 
     private void SpawnGoodsOnShelves()
@@ -88,6 +111,45 @@ public class ObjectSpawner : MonoBehaviour
 
                 }
 
+                if (item.type == "fruit1" && i <= 30)
+                {
+                    Instantiate(fruitItem1, new Vector3(0.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                }
+
+                if (item.type == "fruit2" && i <= 30)
+                {
+                    Instantiate(fruitItem2, new Vector3(1F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                }
+
+                if (item.type == "fruit3" && i <= 30)
+                {
+                    Instantiate(fruitItem3, new Vector3(1.75F - (i * 0.0001F), 0.8F + (i * 0.1F), 2 + (i * 0.0001F)), Quaternion.identity);
+                }
+
+                if (item.type == "fruit4" && i <= 30)
+                {
+                    Instantiate(fruitItem4, new Vector3(2.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                }
+
+                if (item.type == "vege1" && i <= 80)
+                {
+                    Instantiate(vegeItem1, new Vector3(0.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                }
+
+                if (item.type == "vege2" && i <= 30)
+                {
+                    Instantiate(vegeItem2, new Vector3(1F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                }
+
+                if (item.type == "vege3" && i <= 60)
+                {
+                    Instantiate(vegeItem3, new Vector3(1.75F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                }
+
+                if (item.type == "vege4" && i <= 30)
+                {
+                    Instantiate(vegeItem4, new Vector3(2.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                }
             }
         }
     }
