@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150519716592106738, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 4244025781008756071, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
       propertyPath: m_Name
       value: shelfCollider (2)
@@ -109,6 +113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 555822653320542219}
     m_Modifications:
+    - target: {fileID: 213136051244187288, guid: 211cb76135e156742a07d2e04f4a1d87, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 1978366537790816245, guid: 211cb76135e156742a07d2e04f4a1d87, type: 3}
       propertyPath: m_Name
       value: shelf
@@ -175,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150519716592106738, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 4244025781008756071, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
       propertyPath: m_Name
       value: shelfCollider
@@ -241,6 +253,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150519716592106738, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 4244025781008756071, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
       propertyPath: m_Name
       value: shelfCollider (1)
@@ -311,6 +327,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 3150519716592106738, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 4244025781008756071, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
       propertyPath: m_Name
       value: shelfCollider (4)
@@ -377,6 +397,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3150519716592106738, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 076c61c6f3062a4469af967b4e835897, type: 2}
     - target: {fileID: 4244025781008756071, guid: 6efb6a0cb78408f4c98f1cd10d69e424, type: 3}
       propertyPath: m_Name
       value: shelfCollider (3)
