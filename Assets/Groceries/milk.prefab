@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Milk
   price: "3z\u0142"
---- !u!65 &2880243348280275461
+--- !u!65 &1520780886448095387
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,8 +152,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7559056, y: 9.144252, z: 2.7559056}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.7559063, y: 9.144252, z: 2.7559063}
+  m_Center: {x: 0.000022888184, y: 0.0000019073486, z: 0}
 --- !u!1001 &2391771252289951680
 PrefabInstance:
   m_ObjectHideFlags: 0

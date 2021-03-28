@@ -111,7 +111,7 @@ public class ObjectSpawner : MonoBehaviour
 
     private void SpawnGoodsOnShelves()
     {
-        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
+        var items = GetFromFile(@"C:\Hack\data\database.txt");
 
         //var renderer = GetComponent<Renderer>();
         //renderer.enabled = true;
@@ -140,7 +140,7 @@ public class ObjectSpawner : MonoBehaviour
                 if (item.type == "milk" && i <= 7)
                 {
                     Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
-                    Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F) * 0.75F), (item.shelf - 1 + 4) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
+                    Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
                 }
 
                 if (item.type == "bottle" && i <= 4)
@@ -200,7 +200,7 @@ public class ObjectSpawner : MonoBehaviour
                 if (item.type == "tea1" && i <= 5)
                 {
                     Instantiate(tea1, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
-                    Instantiate(tea1, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1 + 4) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(tea1, new Vector3(i * 0.1F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
 
                 }
                 if (item.type == "tea2" && i <= 3)

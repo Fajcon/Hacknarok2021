@@ -29,12 +29,12 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/LocomotionController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ObjectSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ContinuousMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/ProductsController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ProductsController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ShoppingList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ObjectSpawner.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qL8MjJgsVtq42oykxIYfCmlQk3" />
