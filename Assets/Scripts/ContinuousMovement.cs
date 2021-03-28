@@ -20,7 +20,6 @@ public class ContinuousMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Physics.IgnoreLayerCollision(6,8, true);
         character = GetComponent<CharacterController>();
         rig = GetComponent<XRRig>();
     }

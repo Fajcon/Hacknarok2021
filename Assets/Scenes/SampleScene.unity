@@ -127,7 +127,7 @@ NavMeshSettings:
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1562047553}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -143,14 +143,13 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 1562047553}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30096925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1772090992}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -329,7 +328,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1113,7 +1112,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1023955713
 MonoBehaviour:
@@ -1204,7 +1203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203923356
 GameObject:
@@ -1260,7 +1259,7 @@ Transform:
   m_Children:
   - {fileID: 2022196724}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1203923359
 MonoBehaviour:
@@ -1500,6 +1499,15 @@ MonoBehaviour:
   milkItem: {fileID: 581781429010246659, guid: aed7028487325264898ff4e596b3a2ab, type: 3}
   bottleItem: {fileID: 1669666698311109233, guid: b50d9183e4189ab469c94a671c5df5bf, type: 3}
   shelfItem: {fileID: 12706444920967063, guid: 7a861915454c7d747be4ebb53cfab7c1, type: 3}
+  fruitItem1: {fileID: 7883070105893473326, guid: 3bfcad9e963862442bea57ff1803bd67, type: 3}
+  fruitItem2: {fileID: 4177487317908199354, guid: cb4c2d0b8b679984191b8c87ed137944, type: 3}
+  fruitItem3: {fileID: 6182199935427359182, guid: d442057538206cb469e40ed2b8f15c1e, type: 3}
+  fruitItem4: {fileID: 7883070105893473326, guid: 3bfcad9e963862442bea57ff1803bd67, type: 3}
+  vegeItem1: {fileID: 3955245255258703197, guid: 443dd3a92c17b864ca0a0f8edf0e6134, type: 3}
+  vegeItem2: {fileID: 3394589136966665154, guid: f5c2134a684512e4bb35110f9590e41b, type: 3}
+  vegeItem3: {fileID: 6180875772138843997, guid: d41831cd86d6c17419d8b17ae04098fe, type: 3}
+  vegeItem4: {fileID: 4177487317908199354, guid: cb4c2d0b8b679984191b8c87ed137944, type: 3}
+  woodenBoxItem: {fileID: 2833063255590445201, guid: 03a2f680db2455f4b927a90a9e63e1e8, type: 3}
 --- !u!4 &1626584334
 Transform:
   m_ObjectHideFlags: 0
@@ -1578,7 +1586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862175724
 GameObject:

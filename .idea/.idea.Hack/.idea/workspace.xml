@@ -28,9 +28,9 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/LocomotionController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ObjectSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ContinuousMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qL8MjJgsVtq42oykxIYfCmlQk3" />
@@ -53,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1616847466735</updated>
-      <workItem from="1616847475350" duration="36317000" />
+      <workItem from="1616847475350" duration="38446000" />
     </task>
     <servers />
   </component>

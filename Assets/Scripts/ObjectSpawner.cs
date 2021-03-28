@@ -32,6 +32,8 @@ public class ObjectSpawner : MonoBehaviour
     void Start()
     {
         Physics.IgnoreLayerCollision(6, 6, true);
+        Physics.IgnoreLayerCollision(7, 8, true);
+        Physics.IgnoreLayerCollision(6, 8, true);
 
         SpawnShelves();
 
@@ -68,7 +70,7 @@ public class ObjectSpawner : MonoBehaviour
 
     private void SpawnGoodsOnShelves()
     {
-        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
+        var items = GetFromFile(@"C:\Hack\data\database.txt");
 
         //var renderer = GetComponent<Renderer>();
         //renderer.enabled = true;
