@@ -12,8 +12,8 @@
 6;frutkjsf;fruit2;30;5;1;1;1,50
 6;frutkjsf;fruit3;2;5;1;1;1,50
 6;frutkjsf;fruit4;30;5;1;1;1,50
-6;frutkjsf;vege1;80;5;1;1;1,50
-6;frutkjsf;vege3;60;5;1;1;1,50
+6;frutkjsf;vege1;30;5;1;1;1,50
+6;frutkjsf;vege3;30;5;1;1;1,50
 6;frutkjsf;vege4;30;5;1;1;1,50
 6;frutkjsf;vege2;3;5;1;1;1,50
 1;Pomidoryf;tea1;4;3;1;1;2,50
