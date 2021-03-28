@@ -139,7 +139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHand: {fileID: 4904296048852191954, guid: 7e1d10f3a3239fb46b4eba78f24a5c1e, type: 3}
+  name: Apple
+  price: "1z\u0142"
 --- !u!135 &7859744669627073167
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 5953145230369089588}
   - component: {fileID: -5331238271055934288}
   - component: {fileID: 5895879154486466978}
+  - component: {fileID: 9059044170756218715}
   m_Layer: 6
   m_Name: Jar-pink
   m_TagString: Untagged
@@ -139,6 +140,20 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &9059044170756218715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109924258851553209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Marmalade
+  price: "5z\u0142"
 --- !u!1001 &2153086769721844980
 PrefabInstance:
   m_ObjectHideFlags: 0

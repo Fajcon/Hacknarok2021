@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5262494969678707364}
   - component: {fileID: -3473791945276750727}
   - component: {fileID: 6628738444355397326}
+  - component: {fileID: 2669993516848496191}
   m_Layer: 6
   m_Name: Tea1
   m_TagString: Untagged
@@ -126,6 +127,20 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &2669993516848496191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710248380090831483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Tea
+  price: "2z\u0142"
 --- !u!1 &3602236025850585339
 GameObject:
   m_ObjectHideFlags: 0

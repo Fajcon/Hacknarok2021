@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5278716678494682865}
   m_Layer: 0
   m_Name: Left Hand Presence
-  m_TagString: Untagged
+  m_TagString: hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,14 +49,5 @@ MonoBehaviour:
   inputSource: 5
   handModelPrefab: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
   menuPrefab: {fileID: 1028563660914643888, guid: 9b9eaa107e58c8f42b360914019eaf24, type: 3}
-  productPrefab: {fileID: 4384997828055201567, guid: 3e428329576422e4581fe2e4bfffe0c3, type: 3}
   showMenu: 1
   menuOn: 0
-  products:
-  - "Ser 12z\u0142"
-  - "Ser 13z\u0142"
-  - "Ser 12z\u0142"
-  - "Ser 12z\u0142"
-  - "Ser 12z\u0142"
-  - "Ser 12z\u0142"
-  - "Ser 12z\u0142"

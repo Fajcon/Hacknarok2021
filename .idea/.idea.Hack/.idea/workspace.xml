@@ -22,6 +22,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ContinuousMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ShoppingList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@0.10.0-preview.7/Runtime/Interaction/Interactors/XRDirectInteractor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86879D59-1539-4890-A62D-D42337ED228F/4a/aefd8381/InputDevice.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -33,6 +34,7 @@
       <option value="$PROJECT_DIR$/Assets/ProductsController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/HandPresence.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ProductsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ShoppingList.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1qL8MjJgsVtq42oykxIYfCmlQk3" />
