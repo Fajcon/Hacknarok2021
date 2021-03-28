@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1602369083749146658}
   - component: {fileID: -476393747231153453}
   - component: {fileID: 4207724918963650913}
+  - component: {fileID: -2612607493044809709}
   m_Layer: 6
   m_Name: Jar-green
   m_TagString: Untagged
@@ -126,6 +127,20 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &-2612607493044809709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602657808975304070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Jam
+  price: "5z\u0142"
 --- !u!65 &2893925196314255754
 BoxCollider:
   m_ObjectHideFlags: 0

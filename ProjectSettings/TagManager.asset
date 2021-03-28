@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Watch
+  - apple
+  - hand
+  - shopcart
   layers:
   - Default
   - TransparentFX

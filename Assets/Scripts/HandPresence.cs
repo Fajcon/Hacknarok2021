@@ -16,10 +16,9 @@ public class HandPresence : MonoBehaviour
     
     public GameObject handModelPrefab;
     public GameObject menuPrefab;
-    public GameObject productPrefab;
     public bool showMenu = true;
     public bool menuOn;
-    public List<string> products;
+    public static List<string> products = new List<string>();
         
     private Animator handAnimator;
     private GameObject spawnedHandModel;
@@ -49,7 +48,7 @@ public class HandPresence : MonoBehaviour
         }
     }
 
-    void ShowMenu() //TODO napraw to gówno
+    void ShowMenu() //TODO napraw to
     {
         spawnedMenuModel.SetActive(true);
         for (int i = 0; i < 7; i++)
@@ -127,8 +126,8 @@ public class HandPresence : MonoBehaviour
                 !secondaryButtonValuex)
             {
                 flag = false;
-                Debug.Log(activeProduct);
                 products.RemoveAt(activeProduct);
+                // products.Add("test");
             }
         }
 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3308122331110800615}
   - component: {fileID: -5314418999981346555}
   - component: {fileID: 8263582725322127975}
+  - component: {fileID: 2157423076479719875}
   m_Layer: 7
   m_Name: Bread
   m_TagString: Untagged
@@ -141,6 +142,20 @@ CapsuleCollider:
   m_Height: 0.16176167
   m_Direction: 1
   m_Center: {x: -0.010933231, y: 0.0059660533, z: 0.041725375}
+--- !u!114 &2157423076479719875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3394589136966665154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Bread
+  price: "3.50z\u0142"
 --- !u!1001 &3510775313232690128
 PrefabInstance:
   m_ObjectHideFlags: 0

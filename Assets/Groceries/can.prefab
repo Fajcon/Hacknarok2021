@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4795998747866615451}
   - component: {fileID: -4075931000763998149}
   - component: {fileID: 5588997664602109855}
+  - component: {fileID: 4547326130086414189}
   m_Layer: 6
   m_Name: can
   m_TagString: Untagged
@@ -126,6 +127,20 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &4547326130086414189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3043177074253366798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Can of tomatoes
+  price: "3z\u0142"
 --- !u!65 &510930679742155249
 BoxCollider:
   m_ObjectHideFlags: 0

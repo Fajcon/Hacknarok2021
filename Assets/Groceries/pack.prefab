@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -6808448421149654589}
   - component: {fileID: 1394260115264997449}
   - component: {fileID: 8810572924016894326}
+  - component: {fileID: 4198116771758715005}
   m_Layer: 6
   m_Name: pack
   m_TagString: Untagged
@@ -140,6 +141,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.33754447, y: 0.37090665, z: 0.12621006}
   m_Center: {x: 0.0005003661, y: 0.17985299, z: 0.0011789501}
+--- !u!114 &4198116771758715005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278919098750797533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Muesli
+  price: "2z\u0142"
 --- !u!1001 &9137198056522101472
 PrefabInstance:
   m_ObjectHideFlags: 0

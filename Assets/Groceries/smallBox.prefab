@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1604585734868293870}
   - component: {fileID: 2677088101388001530}
   - component: {fileID: 6518822383905542494}
+  - component: {fileID: 3200805438129143284}
   m_Layer: 6
   m_Name: smallBox
   m_TagString: Untagged
@@ -190,6 +191,20 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &3200805438129143284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148349234032660676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cereal
+  price: "10z\u0142"
 --- !u!1 &2526782470579786360
 GameObject:
   m_ObjectHideFlags: 0
