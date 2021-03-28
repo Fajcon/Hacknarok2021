@@ -22,6 +22,16 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject vegeItem4;
     public GameObject woodenBoxItem;
 
+    public GameObject jar1;
+    public GameObject jar2;
+    public GameObject herbs1;
+    public GameObject herbs2;
+    public GameObject tea1;
+    public GameObject tea2;
+    public GameObject tea3;
+    public GameObject tea4;
+    public GameObject tableItem;
+
     //public Material defaultMaterial;
     //public Material pudliszkiMaterial;
 
@@ -56,21 +66,52 @@ public class ObjectSpawner : MonoBehaviour
         Instantiate(shelfItem, new Vector3(1.75F, 0, 0), Quaternion.identity);
         Instantiate(shelfItem, new Vector3(2.5F, 0, 0), Quaternion.identity);
 
+        Instantiate(shelfItem, new Vector3(3.25F, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(4, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(4.75F, 0, 0), Quaternion.identity);
+        Instantiate(shelfItem, new Vector3(5.5F, 0, 0), Quaternion.identity);
+
         var height = 0.8F;
         Instantiate(woodenBoxItem, new Vector3(0.25F, height, 2), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(1F, height, 2), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(1.75F, height, 2), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(2.5F, height, 2), Quaternion.identity);
 
+        Instantiate(tableItem, new Vector3(0.25F, -0.1F, 2F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(1.125F, -0.1F, 2F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(2.5F, -0.1F, 2F), Quaternion.identity);
+
         Instantiate(woodenBoxItem, new Vector3(0.25F, height, 2.5F), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(1F, height, 2.5F), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(1.75F, height, 2.5F), Quaternion.identity);
         Instantiate(woodenBoxItem, new Vector3(2.5F, height, 2.5F), Quaternion.identity);
+
+        Instantiate(tableItem, new Vector3(0.25F, -0.1F, 2.5F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(1.125F, -0.1F, 2.5F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(2.5F, -0.1F, 2.5F), Quaternion.identity);
+
+        Instantiate(woodenBoxItem, new Vector3(3.25F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(4F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(4.75F, height, 2), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(5.5F, height, 2), Quaternion.identity);
+
+        Instantiate(tableItem, new Vector3(3.25F, -0.1F, 2F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(4.125F, -0.1F, 2F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(5.5F, -0.1F, 2F), Quaternion.identity);
+
+        Instantiate(woodenBoxItem, new Vector3(3.25F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(4F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(4.75F, height, 2.5F), Quaternion.identity);
+        Instantiate(woodenBoxItem, new Vector3(5.5F, height, 2.5F), Quaternion.identity);
+
+        Instantiate(tableItem, new Vector3(3.25F, -0.1F, 2.5F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(4.125F, -0.1F, 2.5F), Quaternion.identity);
+        Instantiate(tableItem, new Vector3(5.5F, -0.1F, 2.5F), Quaternion.identity);
     }
 
     private void SpawnGoodsOnShelves()
     {
-        var items = GetFromFile(@"C:\Hack\data\database.txt");
+        var items = GetFromFile(@"C:\Users\Agacia\Desktop\projekty\Hacknarok2021\data\database.txt");
 
         //var renderer = GetComponent<Renderer>();
         //renderer.enabled = true;
@@ -81,76 +122,131 @@ public class ObjectSpawner : MonoBehaviour
             {
                 if (item.type == "can" && i <= 5)
                 {
-                    //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(canItem, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
-                    
+                    Instantiate(canItem, new Vector3(i * 0.1F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                 }
                 if (item.type == "box" && i <= 3)
                 {
-                    //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(boxItem, new Vector3(i * 0.15F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
-
+                    Instantiate(boxItem, new Vector3(i * 0.15F + ((item.aisle - 1 +4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                 }
 
                 if (item.type == "pack" && i <= 4)
                 {
-                    //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(packItem, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
-
+                    Instantiate(packItem, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                 }
 
                 if (item.type == "milk" && i <= 7)
                 {
-                    //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
-
+                    Instantiate(milkItem, new Vector3(i * 0.1F + ((item.aisle - 3.5F) * 0.75F), (item.shelf - 1 + 4) * shelfHeight + firstShelfHeight - (shelfHeight * 2.5F), 0), Quaternion.identity);
                 }
 
                 if (item.type == "bottle" && i <= 4)
                 {
-                    //renderer.sharedMaterial = pudliszkiMaterial;
                     Instantiate(bottleItem, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
-
+                    Instantiate(bottleItem, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
                 }
 
                 if (item.type == "fruit1" && i <= 30)
                 {
                     Instantiate(fruitItem1, new Vector3(0.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                    Instantiate(fruitItem1, new Vector3(3.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
                 }
 
                 if (item.type == "fruit2" && i <= 30)
                 {
                     Instantiate(fruitItem2, new Vector3(1F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                    Instantiate(fruitItem2, new Vector3(4F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
                 }
 
                 if (item.type == "fruit3" && i <= 30)
                 {
                     Instantiate(fruitItem3, new Vector3(1.75F - (i * 0.0001F), 0.8F + (i * 0.1F), 2 + (i * 0.0001F)), Quaternion.identity);
+                    Instantiate(fruitItem3, new Vector3(4.75F - (i * 0.0001F), 0.8F + (i * 0.1F), 2 + (i * 0.0001F)), Quaternion.identity);
                 }
 
                 if (item.type == "fruit4" && i <= 30)
                 {
                     Instantiate(fruitItem4, new Vector3(2.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
+                    Instantiate(fruitItem4, new Vector3(5.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F)), Quaternion.identity);
                 }
 
                 if (item.type == "vege1" && i <= 80)
                 {
                     Instantiate(vegeItem1, new Vector3(0.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                    Instantiate(vegeItem1, new Vector3(3.25F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
                 }
 
                 if (item.type == "vege2" && i <= 30)
                 {
                     Instantiate(vegeItem2, new Vector3(1F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                    Instantiate(vegeItem2, new Vector3(4F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
                 }
 
                 if (item.type == "vege3" && i <= 60)
                 {
                     Instantiate(vegeItem3, new Vector3(1.75F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                    Instantiate(vegeItem3, new Vector3(4.75F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
                 }
 
                 if (item.type == "vege4" && i <= 30)
                 {
                     Instantiate(vegeItem4, new Vector3(2.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                    Instantiate(vegeItem4, new Vector3(5.5F - (i * 0.00001F), 0.8F + (i * 0.1F), 2 + (i * 0.00001F) + 0.5F), Quaternion.identity);
+                }
+
+                if (item.type == "tea1" && i <= 5)
+                {
+                    Instantiate(tea1, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(tea1, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1 + 4) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+                if (item.type == "tea2" && i <= 3)
+                {
+                    Instantiate(tea2, new Vector3(i * 0.15F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(tea2, new Vector3(i * 0.15F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                }
+
+                if (item.type == "tea3" && i <= 4)
+                {
+                    Instantiate(tea3, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(tea3, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                }
+
+                if (item.type == "tea4" && i <= 7)
+                {
+                    Instantiate(tea4, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(tea4, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "herbs1" && i <= 5)
+                {
+                    Instantiate(herbs1, new Vector3(i * 0.1F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(herbs1, new Vector3(i * 0.1F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+                if (item.type == "herbs2" && i <= 3)
+                {
+                    Instantiate(herbs2, new Vector3(i * 0.15F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(herbs2, new Vector3(i * 0.15F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "jar1" && i <= 4)
+                {
+                    Instantiate(jar1, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(jar1, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
+                }
+
+                if (item.type == "jar2" && i <= 7)
+                {
+                    Instantiate(jar2, new Vector3(i * 0.13F + ((item.aisle - 1) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+                    Instantiate(jar2, new Vector3(i * 0.13F + ((item.aisle - 1 + 4) * 0.75F), (item.shelf - 1) * shelfHeight + firstShelfHeight, 0), Quaternion.identity);
+
                 }
             }
         }

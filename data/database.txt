@@ -16,3 +16,13 @@
 6;frutkjsf;vege3;60;5;1;1;1,50
 6;frutkjsf;vege4;30;5;1;1;1,50
 6;frutkjsf;vege2;3;5;1;1;1,50
+1;Pomidoryf;tea1;4;3;1;1;2,50
+2;Kukurydzf;tea2;5;3;2;2;1,50
+3;Kornflejf;tea3;6;3;1;3;4,56
+4;Kornflejf;tea4;3;3;1;4;4,56
+5;Kornflej;jar1;5;3;1;5;4,56
+1;Pomidory;milk;1;4;4;1;1;2,50
+2;Kukurydzf;jar2;5;4;2;2;1,50
+3;Kornflej;herbs1;6;4;1;3;4,56
+4;Kornflejv;tea2;3;4;1;4;4,56
+5;Kornflej;herbs2;5;4;1;5;4,56
