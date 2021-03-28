@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 9132953991573094741}
   - component: {fileID: 332539120671356213}
   - component: {fileID: 4272335762796406910}
+  - component: {fileID: 7774788157767146719}
   m_Layer: 7
   m_Name: Apple
-  m_TagString: Untagged
+  m_TagString: apple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +127,19 @@ MonoBehaviour:
   m_ThrowAngularVelocityScale: 1
   m_GravityOnDetach: 0
   m_RetainTransformParent: 1
+--- !u!114 &7774788157767146719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4177487317908199354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4432e13dfcb9a71478c4d7a1e19517de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 4904296048852191954, guid: 7e1d10f3a3239fb46b4eba78f24a5c1e, type: 3}
 --- !u!135 &7859744669627073167
 SphereCollider:
   m_ObjectHideFlags: 0
